@@ -1,0 +1,114 @@
+2025/11/12 15:36:38 peer dial failed: ping 127.0.0.1:5002: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:5002: connect: connection refused"; retrying in 250ms
+2025/11/12 15:36:38 peer dial failed: ping 127.0.0.1:5002: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:5002: connect: connection refused"; retrying in 500ms
+2025/11/12 15:36:38 peer dial failed: ping 127.0.0.1:5002: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:5002: connect: connection refused"; retrying in 1s
+2025/11/12 15:36:39 peer dial failed: ping 127.0.0.1:5002: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:5002: connect: connection refused"; retrying in 2s
+2025/11/12 15:36:41 peer dial failed: ping 127.0.0.1:5002: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:5002: connect: connection refused"; retrying in 4s
+2025/11/12 15:36:45 peer dial failed: ping 127.0.0.1:5002: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:5002: connect: connection refused"; retrying in 8s
+2025/11/12 15:36:53 peer dial failed: ping 127.0.0.1:5003: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:5003: connect: connection refused"; retrying in 8s
+2025/11/12 15:37:01 [n1] peers connected: 2
+2025/11/12 15:37:01 [n1] workload: tick every=5s, request every=6
+2025/11/12 15:37:26 [n1] recv REQUEST(ts=1, from=n3) -> REPLY
+2025/11/12 15:37:31 [n1] WANTS CS (reqTs=4), waiting for 2 replies
+2025/11/12 15:37:31 [n1] sent REQUEST(ts=4) -> n3
+2025/11/12 15:37:31 [n1] recv REPLY(from=n3, ts=7)
+2025/11/12 15:37:31 [n1] sent REQUEST(ts=4) -> n2
+2025/11/12 15:37:31 [n1] recv REPLY(from=n2, ts=6)
+2025/11/12 15:37:31 [n1] ENTER CS
+2025/11/12 15:37:31 [n1] *** CRITICAL SECTION START ***
+2025/11/12 15:37:34 [n1] recv REQUEST(ts=7, from=n2) -> DEFER (state=HELD, myReqTs=4)
+2025/11/12 15:37:34 [n1] safely updated shared resource at T=10
+2025/11/12 15:37:34 [n1] *** CRITICAL SECTION END ***
+2025/11/12 15:37:34 [n1] EXIT CS -> flushed 1 deferred replies
+2025/11/12 15:37:56 [n1] recv REQUEST(ts=10, from=n3) -> REPLY
+2025/11/12 15:38:01 [n1] WANTS CS (reqTs=14), waiting for 2 replies
+2025/11/12 15:38:01 [n1] sent REQUEST(ts=14) -> n3
+2025/11/12 15:38:01 [n1] sent REQUEST(ts=14) -> n2
+2025/11/12 15:38:01 [n1] recv REPLY(from=n2, ts=16)
+2025/11/12 15:38:01 [n1] recv REPLY(from=n3, ts=18)
+2025/11/12 15:38:01 [n1] ENTER CS
+2025/11/12 15:38:01 [n1] *** CRITICAL SECTION START ***
+2025/11/12 15:38:04 [n1] recv REQUEST(ts=17, from=n2) -> DEFER (state=HELD, myReqTs=14)
+2025/11/12 15:38:04 [n1] safely updated shared resource at T=20
+2025/11/12 15:38:04 [n1] *** CRITICAL SECTION END ***
+2025/11/12 15:38:04 [n1] EXIT CS -> flushed 1 deferred replies
+2025/11/12 15:38:26 [n1] recv REQUEST(ts=21, from=n3) -> REPLY
+2025/11/12 15:38:31 [n1] WANTS CS (reqTs=24), waiting for 2 replies
+2025/11/12 15:38:31 [n1] sent REQUEST(ts=24) -> n3
+2025/11/12 15:38:31 [n1] sent REQUEST(ts=24) -> n2
+2025/11/12 15:38:31 [n1] recv REPLY(from=n3, ts=28)
+2025/11/12 15:38:31 [n1] recv REPLY(from=n2, ts=26)
+2025/11/12 15:38:31 [n1] ENTER CS
+2025/11/12 15:38:31 [n1] *** CRITICAL SECTION START ***
+2025/11/12 15:38:34 [n1] recv REQUEST(ts=27, from=n2) -> DEFER (state=HELD, myReqTs=24)
+2025/11/12 15:38:34 [n1] safely updated shared resource at T=31
+2025/11/12 15:38:34 [n1] *** CRITICAL SECTION END ***
+2025/11/12 15:38:34 [n1] EXIT CS -> flushed 1 deferred replies
+2025/11/12 15:38:56 [n1] recv REQUEST(ts=31, from=n3) -> REPLY
+2025/11/12 15:58:30 peer dial failed: ping 127.0.0.1:5002: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:5002: connect: connection refused"; retrying in 250ms
+2025/11/12 15:58:30 peer dial failed: ping 127.0.0.1:5002: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:5002: connect: connection refused"; retrying in 500ms
+2025/11/12 15:58:31 peer dial failed: ping 127.0.0.1:5002: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:5002: connect: connection refused"; retrying in 1s
+2025/11/12 15:58:32 peer dial failed: ping 127.0.0.1:5002: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:5002: connect: connection refused"; retrying in 2s
+2025/11/12 15:58:34 peer dial failed: ping 127.0.0.1:5002: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:5002: connect: connection refused"; retrying in 4s
+2025/11/12 15:58:38 peer dial failed: ping 127.0.0.1:5003: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:5003: connect: connection refused"; retrying in 8s
+2025/11/12 15:58:46 [n1] peers connected: 2
+2025/11/12 15:58:46 [n1] workload: tick every=5s, request every=6
+2025/11/12 15:59:15 [n1] recv REQUEST(ts=1, from=n3) -> REPLY
+2025/11/12 15:59:15 [n1] recv REQUEST(ts=4, from=n2) -> REPLY
+2025/11/12 15:59:16 [n1] WANTS CS (reqTs=7), waiting for 2 replies
+2025/11/12 15:59:16 [n1] sent REQUEST(ts=7) -> n3
+2025/11/12 15:59:16 [n1] sent REQUEST(ts=7) -> n2
+2025/11/12 15:59:18 [n1] recv REPLY(from=n3, ts=9)
+2025/11/12 15:59:21 [n1] recv REPLY(from=n2, ts=12)
+2025/11/12 15:59:21 [n1] ENTER CS
+2025/11/12 15:59:21 [n1] *** CRITICAL SECTION START ***
+2025/11/12 15:59:24 [n1] safely updated shared resource at T=13
+2025/11/12 15:59:24 [n1] *** CRITICAL SECTION END ***
+2025/11/12 15:59:24 [n1] EXIT CS -> flushed 0 deferred replies
+2025/11/12 15:59:45 [n1] recv REQUEST(ts=11, from=n3) -> REPLY
+2025/11/12 15:59:45 [n1] recv REQUEST(ts=15, from=n2) -> REPLY
+2025/11/12 15:59:46 [n1] WANTS CS (reqTs=18), waiting for 2 replies
+2025/11/12 15:59:46 [n1] sent REQUEST(ts=18) -> n2
+2025/11/12 15:59:46 [n1] sent REQUEST(ts=18) -> n3
+2025/11/12 15:59:48 [n1] recv REPLY(from=n3, ts=20)
+2025/11/12 15:59:51 [n1] recv REPLY(from=n2, ts=23)
+2025/11/12 15:59:51 [n1] ENTER CS
+2025/11/12 15:59:51 [n1] *** CRITICAL SECTION START ***
+2025/11/12 15:59:54 [n1] safely updated shared resource at T=24
+2025/11/12 15:59:54 [n1] *** CRITICAL SECTION END ***
+2025/11/12 15:59:54 [n1] EXIT CS -> flushed 0 deferred replies
+2025/11/12 16:00:15 [n1] recv REQUEST(ts=22, from=n3) -> REPLY
+2025/11/12 16:00:15 [n1] recv REQUEST(ts=26, from=n2) -> REPLY
+2025/11/12 16:00:16 [n1] WANTS CS (reqTs=29), waiting for 2 replies
+2025/11/12 16:00:16 [n1] sent REQUEST(ts=29) -> n2
+2025/11/12 16:00:16 [n1] sent REQUEST(ts=29) -> n3
+2025/11/12 16:00:18 [n1] recv REPLY(from=n3, ts=32)
+2025/11/12 16:00:21 [n1] recv REPLY(from=n2, ts=33)
+2025/11/12 16:00:21 [n1] ENTER CS
+2025/11/12 16:00:21 [n1] *** CRITICAL SECTION START ***
+2025/11/12 16:00:24 [n1] safely updated shared resource at T=34
+2025/11/12 16:00:24 [n1] *** CRITICAL SECTION END ***
+2025/11/12 16:00:24 [n1] EXIT CS -> flushed 0 deferred replies
+2025/11/12 16:00:45 [n1] recv REQUEST(ts=33, from=n3) -> REPLY
+2025/11/12 16:00:45 [n1] recv REQUEST(ts=36, from=n2) -> REPLY
+2025/11/12 16:00:46 [n1] WANTS CS (reqTs=39), waiting for 2 replies
+2025/11/12 16:00:46 [n1] sent REQUEST(ts=39) -> n2
+2025/11/12 16:00:46 [n1] sent REQUEST(ts=39) -> n3
+2025/11/12 16:00:48 [n1] recv REPLY(from=n3, ts=41)
+2025/11/12 16:00:51 [n1] recv REPLY(from=n2, ts=44)
+2025/11/12 16:00:51 [n1] ENTER CS
+2025/11/12 16:00:51 [n1] *** CRITICAL SECTION START ***
+2025/11/12 16:00:54 [n1] safely updated shared resource at T=45
+2025/11/12 16:00:54 [n1] *** CRITICAL SECTION END ***
+2025/11/12 16:00:54 [n1] EXIT CS -> flushed 0 deferred replies
+2025/11/12 16:01:15 [n1] recv REQUEST(ts=43, from=n3) -> REPLY
+2025/11/12 16:01:15 [n1] recv REQUEST(ts=47, from=n2) -> REPLY
+2025/11/12 16:01:16 [n1] WANTS CS (reqTs=50), waiting for 2 replies
+2025/11/12 16:01:16 [n1] sent REQUEST(ts=50) -> n3
+2025/11/12 16:01:16 [n1] sent REQUEST(ts=50) -> n2
+2025/11/12 16:01:18 [n1] recv REPLY(from=n3, ts=52)
+2025/11/12 16:01:21 [n1] recv REPLY(from=n2, ts=55)
+2025/11/12 16:01:21 [n1] ENTER CS
+2025/11/12 16:01:21 [n1] *** CRITICAL SECTION START ***
+2025/11/12 16:01:24 [n1] safely updated shared resource at T=56
+2025/11/12 16:01:24 [n1] *** CRITICAL SECTION END ***
+2025/11/12 16:01:24 [n1] EXIT CS -> flushed 0 deferred replies

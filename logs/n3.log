@@ -1,0 +1,107 @@
+2025/11/12 15:36:56 [n3] peers connected: 2
+2025/11/12 15:36:56 [n3] workload: tick every=5s, request every=6
+2025/11/12 15:37:26 [n3] WANTS CS (reqTs=1), waiting for 2 replies
+2025/11/12 15:37:26 [n3] sent REQUEST(ts=1) -> n1
+2025/11/12 15:37:26 [n3] sent REQUEST(ts=1) -> n2
+2025/11/12 15:37:26 [n3] recv REPLY(from=n1, ts=3)
+2025/11/12 15:37:26 [n3] recv REPLY(from=n2, ts=3)
+2025/11/12 15:37:26 [n3] ENTER CS
+2025/11/12 15:37:26 [n3] *** CRITICAL SECTION START ***
+2025/11/12 15:37:29 [n3] safely updated shared resource at T=5
+2025/11/12 15:37:29 [n3] *** CRITICAL SECTION END ***
+2025/11/12 15:37:29 [n3] EXIT CS -> flushed 0 deferred replies
+2025/11/12 15:37:31 [n3] recv REQUEST(ts=4, from=n1) -> REPLY
+2025/11/12 15:37:34 [n3] recv REQUEST(ts=7, from=n2) -> REPLY
+2025/11/12 15:37:56 [n3] WANTS CS (reqTs=10), waiting for 2 replies
+2025/11/12 15:37:56 [n3] sent REQUEST(ts=10) -> n1
+2025/11/12 15:37:56 [n3] sent REQUEST(ts=10) -> n2
+2025/11/12 15:37:56 [n3] recv REPLY(from=n2, ts=14)
+2025/11/12 15:37:56 [n3] recv REPLY(from=n1, ts=13)
+2025/11/12 15:37:56 [n3] ENTER CS
+2025/11/12 15:37:56 [n3] *** CRITICAL SECTION START ***
+2025/11/12 15:37:59 [n3] safely updated shared resource at T=16
+2025/11/12 15:37:59 [n3] *** CRITICAL SECTION END ***
+2025/11/12 15:37:59 [n3] EXIT CS -> flushed 0 deferred replies
+2025/11/12 15:38:01 [n3] recv REQUEST(ts=14, from=n1) -> REPLY
+2025/11/12 15:38:04 [n3] recv REQUEST(ts=17, from=n2) -> REPLY
+2025/11/12 15:38:26 [n3] WANTS CS (reqTs=21), waiting for 2 replies
+2025/11/12 15:38:26 [n3] sent REQUEST(ts=21) -> n2
+2025/11/12 15:38:26 [n3] recv REPLY(from=n2, ts=24)
+2025/11/12 15:38:26 [n3] sent REQUEST(ts=21) -> n1
+2025/11/12 15:38:26 [n3] recv REPLY(from=n1, ts=23)
+2025/11/12 15:38:26 [n3] ENTER CS
+2025/11/12 15:38:26 [n3] *** CRITICAL SECTION START ***
+2025/11/12 15:38:29 [n3] safely updated shared resource at T=26
+2025/11/12 15:38:29 [n3] *** CRITICAL SECTION END ***
+2025/11/12 15:38:29 [n3] EXIT CS -> flushed 0 deferred replies
+2025/11/12 15:38:31 [n3] recv REQUEST(ts=24, from=n1) -> REPLY
+2025/11/12 15:38:34 [n3] recv REQUEST(ts=27, from=n2) -> REPLY
+2025/11/12 15:38:56 [n3] WANTS CS (reqTs=31), waiting for 2 replies
+2025/11/12 15:38:56 [n3] sent REQUEST(ts=31) -> n1
+2025/11/12 15:38:56 [n3] sent REQUEST(ts=31) -> n2
+2025/11/12 15:38:56 [n3] recv REPLY(from=n2, ts=35)
+2025/11/12 15:38:56 [n3] recv REPLY(from=n1, ts=34)
+2025/11/12 15:38:56 [n3] ENTER CS
+2025/11/12 15:38:56 [n3] *** CRITICAL SECTION START ***
+2025/11/12 15:58:45 [n3] peers connected: 2
+2025/11/12 15:58:45 [n3] workload: tick every=5s, request every=6
+2025/11/12 15:59:15 [n3] WANTS CS (reqTs=1), waiting for 2 replies
+2025/11/12 15:59:15 [n3] sent REQUEST(ts=1) -> n2
+2025/11/12 15:59:15 [n3] recv REPLY(from=n2, ts=3)
+2025/11/12 15:59:15 [n3] sent REQUEST(ts=1) -> n1
+2025/11/12 15:59:15 [n3] recv REPLY(from=n1, ts=3)
+2025/11/12 15:59:15 [n3] ENTER CS
+2025/11/12 15:59:15 [n3] *** CRITICAL SECTION START ***
+2025/11/12 15:59:15 [n3] recv REQUEST(ts=4, from=n2) -> DEFER (state=HELD, myReqTs=1)
+2025/11/12 15:59:16 [n3] recv REQUEST(ts=7, from=n1) -> DEFER (state=HELD, myReqTs=1)
+2025/11/12 15:59:18 [n3] safely updated shared resource at T=8
+2025/11/12 15:59:18 [n3] *** CRITICAL SECTION END ***
+2025/11/12 15:59:18 [n3] EXIT CS -> flushed 2 deferred replies
+2025/11/12 15:59:45 [n3] WANTS CS (reqTs=11), waiting for 2 replies
+2025/11/12 15:59:45 [n3] sent REQUEST(ts=11) -> n1
+2025/11/12 15:59:45 [n3] sent REQUEST(ts=11) -> n2
+2025/11/12 15:59:45 [n3] recv REPLY(from=n2, ts=14)
+2025/11/12 15:59:45 [n3] recv REPLY(from=n1, ts=15)
+2025/11/12 15:59:45 [n3] ENTER CS
+2025/11/12 15:59:45 [n3] *** CRITICAL SECTION START ***
+2025/11/12 15:59:45 [n3] recv REQUEST(ts=15, from=n2) -> DEFER (state=HELD, myReqTs=11)
+2025/11/12 15:59:46 [n3] recv REQUEST(ts=18, from=n1) -> DEFER (state=HELD, myReqTs=11)
+2025/11/12 15:59:48 [n3] safely updated shared resource at T=19
+2025/11/12 15:59:48 [n3] *** CRITICAL SECTION END ***
+2025/11/12 15:59:48 [n3] EXIT CS -> flushed 2 deferred replies
+2025/11/12 16:00:15 [n3] WANTS CS (reqTs=22), waiting for 2 replies
+2025/11/12 16:00:15 [n3] sent REQUEST(ts=22) -> n1
+2025/11/12 16:00:15 [n3] sent REQUEST(ts=22) -> n2
+2025/11/12 16:00:15 [n3] recv REPLY(from=n2, ts=25)
+2025/11/12 16:00:15 [n3] recv REPLY(from=n1, ts=26)
+2025/11/12 16:00:15 [n3] ENTER CS
+2025/11/12 16:00:15 [n3] *** CRITICAL SECTION START ***
+2025/11/12 16:00:15 [n3] recv REQUEST(ts=26, from=n2) -> DEFER (state=HELD, myReqTs=22)
+2025/11/12 16:00:16 [n3] recv REQUEST(ts=29, from=n1) -> DEFER (state=HELD, myReqTs=22)
+2025/11/12 16:00:18 [n3] safely updated shared resource at T=30
+2025/11/12 16:00:18 [n3] *** CRITICAL SECTION END ***
+2025/11/12 16:00:18 [n3] EXIT CS -> flushed 2 deferred replies
+2025/11/12 16:00:45 [n3] WANTS CS (reqTs=33), waiting for 2 replies
+2025/11/12 16:00:45 [n3] sent REQUEST(ts=33) -> n1
+2025/11/12 16:00:45 [n3] recv REPLY(from=n1, ts=36)
+2025/11/12 16:00:45 [n3] sent REQUEST(ts=33) -> n2
+2025/11/12 16:00:45 [n3] recv REPLY(from=n2, ts=35)
+2025/11/12 16:00:45 [n3] ENTER CS
+2025/11/12 16:00:45 [n3] *** CRITICAL SECTION START ***
+2025/11/12 16:00:45 [n3] recv REQUEST(ts=36, from=n2) -> DEFER (state=HELD, myReqTs=33)
+2025/11/12 16:00:46 [n3] recv REQUEST(ts=39, from=n1) -> DEFER (state=HELD, myReqTs=33)
+2025/11/12 16:00:48 [n3] safely updated shared resource at T=40
+2025/11/12 16:00:48 [n3] *** CRITICAL SECTION END ***
+2025/11/12 16:00:48 [n3] EXIT CS -> flushed 2 deferred replies
+2025/11/12 16:01:15 [n3] WANTS CS (reqTs=43), waiting for 2 replies
+2025/11/12 16:01:15 [n3] sent REQUEST(ts=43) -> n2
+2025/11/12 16:01:15 [n3] recv REPLY(from=n2, ts=46)
+2025/11/12 16:01:15 [n3] sent REQUEST(ts=43) -> n1
+2025/11/12 16:01:15 [n3] recv REPLY(from=n1, ts=47)
+2025/11/12 16:01:15 [n3] ENTER CS
+2025/11/12 16:01:15 [n3] *** CRITICAL SECTION START ***
+2025/11/12 16:01:15 [n3] recv REQUEST(ts=47, from=n2) -> DEFER (state=HELD, myReqTs=43)
+2025/11/12 16:01:16 [n3] recv REQUEST(ts=50, from=n1) -> DEFER (state=HELD, myReqTs=43)
+2025/11/12 16:01:18 [n3] safely updated shared resource at T=51
+2025/11/12 16:01:18 [n3] *** CRITICAL SECTION END ***
+2025/11/12 16:01:18 [n3] EXIT CS -> flushed 2 deferred replies

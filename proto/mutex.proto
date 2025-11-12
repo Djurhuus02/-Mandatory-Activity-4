@@ -1,0 +1,15 @@
+syntax = "proto3";
+package mtx;
+option go_package = "example.com/ra/proto;pb";
+
+message Empty {}
+message RequestMsg { int64 timestamp = 1; string from = 2; }
+message ReplyMsg   { int64 timestamp = 1; string from = 2; }
+message PingReq {}
+message PingResp { string id = 1; }
+
+service Mutex {
+  rpc Ping    (PingReq)    returns (PingResp);
+  rpc Request (RequestMsg) returns (Empty);
+  rpc Reply   (ReplyMsg)   returns (Empty);
+}
